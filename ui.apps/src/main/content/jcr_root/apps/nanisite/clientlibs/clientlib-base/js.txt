@@ -13,3 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ###############################################################################
+jquery/js/jquery-3.4.1.min.js

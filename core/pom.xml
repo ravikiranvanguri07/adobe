@@ -44,7 +44,7 @@
                         <configuration>
                             <bnd><![CDATA[
 Bundle-Category: nanisite
-Import-Package: javax.annotation;version=0.0.0,org.apache.sling.api.resource;version="[2.3,3)",*
+Import-Package: javax.annotation;version=0.0.0,org.apache.sling.api.resource;version="[2.3,3)",com.adobe.granite.asset.api;resolution:=optional,*
 -exportcontents: ${packages;VERSIONED}
 Sling-Model-Packages: nanisite.core.models
 -snapshot: ${tstamp;yyyyMMddHHmmssSSS}
@@ -187,6 +187,47 @@ Bundle-DocURL:
         <dependency>
             <groupId>uk.org.lidalia</groupId>
             <artifactId>slf4j-test</artifactId>
+        </dependency>
+           <!-- https://mvnrepository.com/artifact/com.adobe.aem/uber-jar -->
+
+<!-- https://mvnrepository.com/artifact/com.day.cq.dam/cq-dam-core -->
+<!--<dependency>
+    <groupId>com.day.cq.dam</groupId>
+    <artifactId>cq-dam-core</artifactId>
+    <version>5.5.0</version>
+    <scope>provided</scope>
+</dependency>-->
+<dependency>
+    <groupId>com.adobe.aem</groupId>
+    <artifactId>uber-jar</artifactId>
+    <version>6.4.0</version>
+    <classifier>apis</classifier>
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+    <groupId>javax.mail</groupId>
+    <artifactId>javax.mail-api</artifactId>
+    <version>1.6.2</version>
+</dependency>
+
+ <dependency>
+
+            <groupId>javax.inject</groupId>
+
+            <artifactId>javax.inject</artifactId>
+
+            <version>1</version>
+
+            <scope>provided</scope>
+
+        </dependency>
+
+ 
+        <dependency>
+        	<groupId>interview</groupId>
+        	<artifactId>aem-interview.core</artifactId>
+        	<version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>

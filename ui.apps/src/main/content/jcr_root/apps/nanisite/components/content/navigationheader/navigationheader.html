@@ -1,0 +1,33 @@
+
+<div  data-sly-use.navigationHead="nanisite.core.models.NavigationHeader" class="fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <a class="navbar-brand" href="${currentPage.getParent.path}.html">Nani-Website</a>
+
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div>
+    <ul  data-sly-list.navbarItem="${navigationHead.menu.listChildren}" class="navbar-nav">
+	
+         <li>
+               <a class="nav-link" data-sly-attribute.href="${navbarItem.navLink}.html"> ${navbarItem.navItem}</a>
+         </li>
+</ul>
+  </div>
+<sly data-sly-list.navbarItem="${navigationHead.menu.listChildren}" >
+   <div  data-sly-list.item="${navbarItem.listChildren}" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+        <ul  data-sly-list.subnav="${item.listChildren}" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+		     <li>
+                   <a data-sly-attribute.href="${subnav.subnavlink}.html" class="dropdown-item" >${subnav.subnavitem}</a>
+             </li>
+	    </ul>
+	   </div>  
+       </div>
+       </sly>
+
+</nav>
+</div>

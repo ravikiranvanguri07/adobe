@@ -1,0 +1,37 @@
+<div data-sly-test="${resource.name == 'sightlytest'}">
+    <p>Component Name: ${resource.name}</p>
+    <p>Page Path: ${currentPage.path}</p>
+</div>
+<div>
+<ul data-sly-list.child="${currentPage.getParent.listChildren}">
+<li>${child.name}</li>
+</ul>
+</div>
+<div>
+<ul data-sly-repeat.child="${currentPage.listChildren}">
+<li>${child.name}</li>
+</ul>
+</div>
+
+<p data-sly-text="${properties.sightly}"> This is the orignal Text</p>
+<div data-sly-element ="${'h1'}"> This is H1 tag </div>
+
+<div data-sly-list.child="${currentPage.listChildren}">
+<li>key : ${child.name}</li>
+<li>value :<a href="${child.path}.html">${child.title}</a></li>
+</div>
+<sly data-sly-use.clientlib ="/libs/granite/sightly/templates/clientlib.html"
+data-sly-call="${clientlib.all @ categories = 'nanisite' }" />
+
+<div data-sly-unwrap="${properties.sightly}">I hope this is displayed</div>
+
+<sly data-sly-unwrap="${properties.sightly}"></sly>
+
+<h3>AAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEMMMMMMMMMMMMMMMMMMMMMMM</h3>
+
+<div data-sly-list.childPages="${currentPage.getParent.listChildren}">
+    <span>Name: ${childPages.name}</span>
+    <span>Count: ${childPagesList.count}</span>
+    <span>Index: ${childPagesList.index}</span>
+</div>
+
