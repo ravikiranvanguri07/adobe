@@ -1,0 +1,28 @@
+
+<div class="container">
+   <div class="row">
+      <div  data-sly-test="${properties.selectColumn == '1'}" class="col">
+         <div data-sly-resource="${'content' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+      </div>
+      <sly data-sly-test="${properties.selectColumn == '2'}">
+         <div class="col">
+            <div data-sly-resource="${'content' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+         </div>
+         <div class="col">
+            <div data-sly-resource="${'content2' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+         </div>
+      </sly>
+      <sly data-sly-test="${properties.selectColumn == '3'}">
+         <div class="col">
+            <div data-sly-resource="${'content' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+         </div>
+         <div class="col">
+            <div data-sly-resource="${'content2' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+         </div>
+         <div class="col">
+            <div data-sly-resource="${'content3' @ resourceType='wcm/foundation/components/responsivegrid'}"></div>
+         </div>
+      </sly>
+   </div>
+</div>
+

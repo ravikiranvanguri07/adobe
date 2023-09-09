@@ -1,0 +1,16 @@
+<div data-sly-use.assetinfo="nanisite.core.models.AssetInfo" class="container">
+   <div class="row justify-content-md-center">
+      <form class="d-flex" role="search">
+         <input class="form-control me-2 assetSearchInput" id="assetId" onkeyup="nani.site.assetSearch()" type="search" placeholder="Search" aria-label="Search">
+      </form>
+   </div>
+   <ul id="resultsId">
+      <sly data-sly-list.asset="${assetinfo.assetData}">
+         <li>
+            <a href="${asset.path}"> ${asset.name} </a>
+            <p>${asset.size}</p>
+            <p>${asset.mimeType}</p>
+         </li>
+      </sly>
+   </ul>
+</div>

@@ -1,0 +1,25 @@
+<footer class="text-center text-white" style="background-color: #caced1;">
+  <!-- Grid container -->
+  <div data-sly-use.footerElement="nanisite.core.models.FooterElement" class="container p-4">
+    <!-- Section: Images -->
+    <section class="">
+      <div class="row">
+	 <sly data-sly-list.footerItem="${footerElement.footer.listChildren}">
+        <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+          <div
+            class="bg-image hover-overlay ripple shadow-1-strong rounded"
+            data-ripple-color="light"
+          >
+            <img
+              src="${footerItem.footerimage}"
+              class="w-100"
+            />
+          </div>
+        </div>
+		</sly>
+        </div>
+    </section>
+    <!-- Section: Images -->
+  </div>
+
+</footer>
